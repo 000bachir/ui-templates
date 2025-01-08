@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100dvh;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    position: relative;
+    width: 50vmin;
+    aspect-ratio: 1 / 1.6;
+    border: 1px solid darkblue;
+    margin: auto;
+    inset: 0;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.card::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width:100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(130deg,
+    transparent 0% 33%,
+     #12c2e9 66%,
+      #c471ed 83.5%,
+       #f64f59 100%);
+    background-position:0% 0%;
+    background-size: 300% 300%;
+    transition: all 600ms ease;
+    border-radius: inherit;
+    will-change: contents;
+}
+
+.card:hover::before{
+    background-position:100% 100%;
+    scale: 1.03 1.08;
+}
+
+.card::after{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    inset: 0;
+    background: radial-gradient(
+        rgba(255,255,255,0.2)8%,
+        transparent 8%
+    );
+    background-position: 0% 0%;
+    background-size: 5vmin 5vmin;
+    transition: all 400ms ease;
+}
+
+.card:hover::after{
+    background-position: -10% 0% ;
+}
+
+h3,h4{
+    color: antiquewhite;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 1.5px;
+    margin: 1rem;
+    line-height: 40px;
+    z-index: 10;
+}
+
+h3{
+    font-size: 6vmin;
+    position: relative;
+}
+
+h4{
+    font-size: 3vmin;
+}
+
+.word{
+    display: inline-block;
+    margin: 0vmin 0.3vmin;
+    position: relative;
+    transform: translateY(50%);
+    opacity: 0;
+    z-index: 10;
+    transition: none;
+}
+
+.card:hover .word{
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 1s ease;
+
+}

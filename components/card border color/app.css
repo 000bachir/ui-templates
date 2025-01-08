@@ -1,0 +1,54 @@
+@property --gradient-angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#card {
+    height: 500px;
+    width: 350px;
+    border-radius: 20px;
+    position: relative;
+    background-color: rgba(19, 19, 19, 0.9);
+}
+
+#card::before , #card::after {
+    content: "";
+    position: absolute;
+    height: calc(100% + 1px);
+    width: calc(100% + 1px);
+    z-index: -1;
+    background: conic-gradient(from var(--gradient-angle),
+        #ff0000, #ff8000, #ffff00, #80ff00, #00ff00, #00ff80, #00ffff, #0080ff, #0000ff, #8000ff, #ff00ff, #ff0080, #ff0000); /* Smoother gradient */
+    animation: animate 10s ease infinite; /* Use ease timing */
+    border-radius: inherit;
+    will-change: transform; /* Hint for performance */
+}
+
+@keyframes animate {
+    0% {
+        --gradient-angle: 0deg;
+    }
+    100% {
+        --gradient-angle: 360deg;
+    }
+}
+
+#card::after {
+    filter: blur(20px);
+}

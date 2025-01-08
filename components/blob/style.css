@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #000;
+    height: 100vh;
+}
+
+#blob{
+    height: 250px;
+    background-color: #fff;
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 2;
+    background: linear-gradient(to right, #03001e, #7303c0, #ec38bc, #fdeff9);
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+    from{
+        rotate:0deg;
+    }
+
+    50%{
+        scale: 1 1.5;
+    }
+
+    to{
+        rotate:360deg;
+    }
+}
+
+#blur{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    backdrop-filter: blur(100px);
+}

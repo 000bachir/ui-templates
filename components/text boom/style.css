@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    font-family: 'Courier New', Courier, monospace;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.word{
+    color: #fff;
+    font-size: 8vmin;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+
+.line{
+    display: flex;
+    justify-content: space-between;
+    line-height: 80px;
+
+}
+
+.text:has(.fancy:hover) .word:not(.fancy:hover){
+    opacity: 0.2;
+}
+
+
+
+.fancy > .split{
+    display: inline-block;
+    margin: 0vmin 0.4vmin;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+}
+
+.fancy:hover > .split:nth-child(1){
+    transform: translate(-50% , 20%) rotate(20deg);
+}
+.fancy:hover > .split:nth-child(2){
+    transform: translate(0% , 0%) rotate(30deg);
+}
+.fancy:hover > .split:nth-child(3){
+    transform: translate(75% , -20%) rotate(-10deg);
+}
+.fancy:hover > .split:nth-child(4){
+    transform: translate(70% , -40%) rotate(30deg);
+}
+.fancy:hover > .split:nth-child(5){
+    transform: translate(0% , 0%) rotate(10deg);
+}
+.fancy:hover > .split:nth-child(6){
+    transform: translate(50% , 0%) rotate(60deg);
+}
+.fancy:hover > .split:nth-child(7){
+    transform: translate(65% , 0%) rotate(90deg);
+}
+.fancy:hover > .split:nth-child(8){
+    transform: translate(50% , 40%) rotate(120deg);
+}
+.fancy:hover > .split:nth-child(9){
+    transform: translate(50% , 50%) rotate(10deg);
+}
+.fancy:hover > .split:nth-child(10){
+    transform: translate(50% , 49%) rotate(10deg);
+}
+.fancy:hover > .split:nth-child(11){
+    transform: translate(50% , 60%) rotate(10deg);
+}
+.fancy:hover > .split:nth-child(12){
+    transform: translate(50% , 60%) rotate(10deg);
+}
+.fancy:hover > .split:nth-child(13){
+    transform: translate(50% , 60%) rotate(10deg);
+}
+
+.fancy:hover > .split:nth-child(14) {
+    transform: translate(20%, -50%) rotate(-90deg);
+}
+.fancy:hover > .split:nth-child(15) {
+    transform: translate(10%, 30%) rotate(50deg);
+}
+.fancy:hover > .split:nth-child(16) {
+    transform: translate(-60%, -60%) rotate(25deg);
+}
+.fancy:hover > .split:nth-child(17) {
+    transform: translate(80%, 20%) rotate(-40deg);
+}
+.fancy:hover > .split:nth-child(18) {
+    transform: translate(-80%, 40%) rotate(110deg);
+}
+.fancy:hover > .split:nth-child(19) {
+    transform: translate(30%, -20%) rotate(-70deg);
+}
+.fancy:hover > .split:nth-child(20) {
+    transform: translate(70%, -10%) rotate(100deg);
+}
+.fancy:hover > .split:nth-child(21) {
+    transform: translate(-70%, 30%) rotate(30deg);
+}
+.fancy:hover > .split:nth-child(22) {
+    transform: translate(100%, -50%) rotate(-10deg);
+}
+.fancy:hover > .split:nth-child(23) {
+    transform: translate(-100%, 50%) rotate(60deg);
+}
+.fancy:hover > .split:nth-child(24) {
+    transform: translate(40%, 60%) rotate(120deg);
+}
+.fancy:hover > .split:nth-child(25) {
+    transform: translate(-50%, 80%) rotate(-80deg);
+}
+.fancy:hover > .split:nth-child(26) {
+    transform: translate(60%, -70%) rotate(90deg);
+}
+.fancy:hover > .split:nth-child(27) {
+    transform: translate(-60%, 20%) rotate(-30deg);
+}
+.fancy:hover > .split:nth-child(28) {
+    transform: translate(90%, -10%) rotate(70deg);
+}
+.fancy:hover > .split:nth-child(29) {
+    transform: translate(-90%, 10%) rotate(-100deg);
+}
+.fancy:hover > .split:nth-child(30) {
+    transform: translate(0%, -90%) rotate(50deg);
+}
